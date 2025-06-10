@@ -1,7 +1,14 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+
+	"github.com/klausmark/go-public/classichelloworldmessage"
+	"github.com/klausmark/go-public/stupidmessage"
+)
 
 func main() {
-	fmt.Println("Hello, World!")
+	var sm stupidmessage.StupidMessage = classichelloworldmessage.ClassicHelloWorldMessage{}
+	message := sm.GetMessage()
+	fmt.Printf("%s\n", message)
 }
